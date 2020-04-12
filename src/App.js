@@ -1,26 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Faker from "faker";
+import Userprofile from "./userprofile";
+const APP = () => {
+   return(
+   <div className="container" style={{"marginTop":"20px"}}>
+   <Userprofile name = "Harry" profile = "Graphics designer" url={Faker.image.avatar()}/>
+   <Userprofile name = "Joe" profile = "Machine learning" url={Faker.image.avatar()}/>
+   <Userprofile name = "Ross" profile = "Data science" url={Faker.image.avatar()}/>
+   </div> 
+   )
+   
+};
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export default APP;
